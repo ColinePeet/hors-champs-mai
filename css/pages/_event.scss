@@ -1,0 +1,87 @@
+#page{
+    .grange{
+        padding: 40px 0;
+        h2{
+            margin-bottom: 60px;
+        }
+        img{
+            margin-bottom: 10px;
+        }
+    }
+    .traiteur{
+        h2{
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .section-flex{
+            align-items: center;
+        }
+    }
+}
+
+//page à propos
+#page{
+    .stef-aure{
+        padding-top: 40px;
+        h2{
+            margin-bottom: 30px;
+        }
+        p{
+            margin-bottom: 30px;
+        }
+    }
+    .histoire{
+        h2{
+            margin-bottom: 60px;
+        }
+    }
+    .travaux{
+        padding-top: 40px;
+        h2{
+            margin-bottom: 40px;
+        }
+        p{
+            margin:0;
+        }
+    }
+    .projet{
+    padding: 90px 0 0 0;
+    }
+    .travaux-swiper{
+        padding-top: 0;
+    }
+}
+
+@media (max-width:900px){
+    #page .projet {
+        padding: 50px 0 90px 0;
+    }
+}
+@media (max-width:700px){
+    #page .grange h2, #page .traiteur h2, #page .stef-aure h2 {
+        margin-bottom: 20px;
+    }
+    #page .traiteur h2 {
+        text-align: left;
+    }
+    #page .traiteur .section-flex {
+        max-width: 100%;
+        flex-direction: column;
+    }
+    #page .stef-aure {
+        padding-top: 20px;
+    }
+    #page .histoire h2 {
+        margin-bottom: 20px;
+        margin-top: 50px;
+    }
+    .travaux{
+        display: none;
+    }
+    #page .projet {
+        padding: 0px 0 50px 0;
+    }
+    #page .projet .small-englobe{
+        max-width: 100%;
+    }
+}

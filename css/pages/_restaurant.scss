@@ -1,0 +1,367 @@
+#page{
+.le-chef, .resto-mot{
+    h2{
+        margin-bottom: 10px;
+    }
+}
+.le-chef{
+    p{margin: 0}
+}
+.resto-mot{
+    .texte{
+        margin-top: 20px;
+        hr{
+            width: 150px;
+            margin-top: 65px;
+            border: .5px solid $color;
+        }
+    }
+    .resto-mot-bg{
+        margin-top: 20px;
+        background: url('../img/restau.jpg') center/cover;
+        width: 51%;
+        height: 600px;
+    }
+}
+.menu{
+    h2{
+        margin-bottom: 40px;
+    }
+    p{
+        margin-bottom: 50px;
+    }
+    h4{
+        margin-bottom: 5px;
+    }
+    .bg-menu{
+        background: url('../img/menu.jpg') center/cover;
+        width: 100%;
+        height: 850px;
+        position: relative;
+        .contenu-menu{
+            background: rgba($color: white, $alpha: .88);
+            width: 70%;
+            height: 90%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 70px 90px;
+            color: rgb(83, 78, 76);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            h5{
+                text-transform: uppercase;
+                font-size: .9em;
+                margin: 0;
+                font-weight: 600;
+                line-height: 1.3em;
+                padding: 0 20px;
+            }
+            hr{
+                border: .5px solid rgb(172, 161, 157);
+            }
+            p{margin: 0;font-size: 1em;padding: 0 20px;}
+            .short-line{
+                width: 40px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+            .title-line{
+                margin-bottom: 35px;
+                margin-top: 10px;
+            }
+            .service{
+                h6{
+                    font-family: 'lora', serif;
+                    font-size: 1.1em;
+                    font-weight: 400;
+                    margin: 25px 0 0 0;
+                }
+                p{
+                    font-size: .9em;
+                }
+                .short-line{
+                    margin-bottom: 0;
+                    margin-top: 25px;
+                }
+            }
+            .nb{padding: 0;}
+        }
+    }
+
+}
+
+
+
+.reservation{
+    .flex{
+        display: flex;
+        justify-content: space-between;
+        div{
+            display: flex;
+            flex-direction: column;
+            width: 48%;
+            label{
+                font-weight: 500;
+                font-family: 'raleway', sans-serif;
+            }
+            input{
+                width: 100%;
+                border-radius: 3px;
+                border: 1px solid lightgray;
+                padding: 6px;
+                margin: 4px 0 12px 0;
+            }
+        }
+    }
+    .submit{
+        background: $color;
+        color: white;
+        font-weight: 500;
+        padding: 8px 30px;
+        border-radius: 3px;
+        border: none;
+        font-family: 'raleway', sans-serif;
+    }
+}
+
+.presse{
+    background: #F3F1EF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2{
+        text-align: center;
+    }
+    .article{
+        border-radius: 3px;
+        display: flex;
+        justify-content: space-between;
+        height: 270px;
+        margin-bottom: 50px;
+        .article-bg{
+            background: url('../img/resto4.jpg') center/cover;
+            width: 50%;
+            height: 100%;
+        }
+        .bg2{
+            background: url('../img/resto1.jpg') center/cover;
+        }
+        .txt{
+            width: 50%;
+            padding: 5px 35px 0 35px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            h5{
+                font-family: 'raleway', sans-serif;
+                font-size: 1.3em;
+                margin: 0;
+                margin-top: 5px;
+            }
+            p{
+                font-size: 1em;
+            }
+            a{
+                color: black;
+                font-weight: 500;
+                font-family: 'raleway', sans-serif;
+                font-size: 1em;
+                text-decoration: underline;
+            }
+        }
+        hr{
+            border: .5px solid lightgrey;
+            margin: 0;
+            margin-top: 30px;
+        }
+        .article-info{
+            display: flex;
+            box-sizing: border-box;
+            justify-content: space-between;
+            align-items: center;       
+            p{
+                font-size: 0.9em;
+                font-family: 'raleway', sans-serif;
+                font-weight: bold;
+            }
+        }
+    }
+}
+.more-button{
+    background: $color;
+    color: white;
+    font-weight: 500;
+    padding: 8px 30px;
+    border-radius: 3px;
+    font-family: 'raleway', sans-serif;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.columns-3{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    .single-prod{
+       padding: 20px 15px;
+        height: 160px;
+       background: url('../img/traiteur.jpeg') center/cover;
+       overflow: hidden;
+       position: relative;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       color: white;
+       cursor: pointer;
+       &::before{
+        content: '';
+        position: absolute;
+        width: 0;
+        left: 0;
+        height: 100%;
+        background: rgba($color: black, $alpha: .6);
+        opacity: 1;
+        transition: .3s all ease-in-out;
+       }
+       &:hover{
+           &::before{
+           width: 100%
+        }
+        .texte{
+            opacity: 1;
+        }
+       }
+       .texte{
+           z-index: 3;
+           opacity: 0;
+           transition: .5s all ease-in-out;
+           h6{
+            font-family: 'lora', serif;
+            font-size: 1.4em;
+            margin: 0;
+            margin-bottom: 8px;
+            font-family: 400;
+        }
+        p{
+            margin: 0;
+        }
+       }
+    }
+}
+.waiting{
+    font-size: 1.1em;
+    line-height: 1.5em;
+}
+.instagram{
+    padding: 90px 0 40px 0;
+}
+.prod{
+    padding: 90px 0 150px 0;
+}
+}
+
+
+@media (max-width:900px){
+    #page section p, h4{
+        font-size: 1em;
+    }
+    h2{
+        font-size: 2.5em;
+        margin-bottom: 50px;
+    }
+    #page {
+        padding: 20px 0;
+    }
+    #page section {
+        padding: 60px 0;
+    }
+    #page .waiting {
+        font-size: 1em !important;
+        margin-top: 40px;
+    }
+    #page .columns-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width:700px){
+    .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom: 60px !important;
+    }
+    h2{
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+    #page {
+        padding: 0;
+        padding-top: 40px;
+    }
+    #page section h4{
+        font-size: 1em;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    #page section {
+        padding: 0;
+    }
+    #page .waiting {
+        font-size: 1em !important;
+        margin-top: 40px;
+    }
+    #page .columns-3 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #page .section-flex {
+        flex-direction: column-reverse;
+    }
+    #page .section-flex img {
+        width: 100%;
+    }
+    #page .section-flex .texte {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    #page .resto-mot .resto-mot-bg {
+        width: 100%;
+        height: 400px;
+    }
+    #page .resto-mot .resto-mot-bg {
+      margin-top: 0px;
+    }
+    .center{
+        text-align: left;
+        max-width: 90vw;
+    }
+    #page .prod {
+        padding: 60px 0 90px 0;
+        h2{
+            margin-bottom: 20px;
+        }
+    }
+    #page .presse h2 {
+        text-align: left;
+        margin-top: 30px;
+    }
+    #page .presse .article {
+        flex-direction: column;
+        height: auto;
+    }
+    #page .presse .article .txt {
+        width: 100%;
+        padding: 20px 0 0 0;
+        line-height: 1.4em;
+    }
+    #page .presse .article .article-bg {
+        width: 100%;
+        height: 200px;
+    }
+    #page .presse .article .txt p {
+        margin-top: 8px;
+    }
+    #page .presse .article .txt h5 {
+        margin-top: 5px;
+    }
+}

@@ -1,0 +1,123 @@
+footer{
+    background: $darkColor;
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .foot-info{
+        padding: 20px 0 5px 0;
+        width: 100%;
+        font-size: .9em;
+        display: flex;
+        justify-content: space-around;
+        p{
+            line-height: 1.6em;  
+            font-family: 'nanum gothic', sans-serif;
+            margin: 0 0 5px 0;
+        }
+        a{line-height: 1.6em;
+            margin-bottom: 10px;
+            font-size:1em;
+        }
+        h4{
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 1em;
+        }
+        .foot-flex{
+            width: 25%;
+        }
+
+    }
+    .newsletter-form{
+        font-family: 'nanum gothic', sans-serif;
+        position: relative;
+        text-align: center;
+        margin-top: 20px;
+        input{
+            border: none;
+            padding: 6px 10px;
+            font-size: .9em;
+        }
+        .champ{
+            width: 350px;
+        }
+        .submit{
+            background: rgb(146, 134, 121);
+            width: 30px;
+            cursor: pointer;
+        }
+        img{
+            width: 16px;
+            position: absolute;
+            right: 8px;
+            bottom: 6px;
+        }
+    }
+    .social-link{
+        img{
+            width: 20px;
+            margin-right: 10px
+        }
+    }
+    .credits{
+        font-size: 0.9em;
+        margin-bottom: 10px;
+    }
+}
+@media screen and (min-width:900px){
+    footer{
+        .line{
+            display: block;
+            text-align: center;
+            margin: 2px auto;
+            height: 1px;
+            margin-bottom: 6px;
+            width: 0;
+            background: white;
+            transition: .3s all ease-in-out;
+        }
+        .link:hover{
+            .line{
+                width: 70px;
+            }
+        }
+    }
+}
+@media screen and (min-width:900px){
+    .page-links{
+        a{
+            &:hover{
+                background: $color;
+            }
+        }
+    }
+    .page-header nav ul li a:hover{
+        hr{
+            width: 100%;
+        }
+    }
+}
+@media screen and (max-width:900px){
+    footer{
+        .foot-info{
+            justify-content: space-between;
+        }
+    }
+}
+@media screen and (max-width:700px){
+    footer{
+        .foot-info{
+            flex-direction: column;
+            text-align: center;
+            h4{
+                margin: 20px 0 10px 0;
+            }
+            .foot-flex{
+                width: 100%;
+                p{font-size: .9em}
+            }
+        }
+    }
+}
